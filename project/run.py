@@ -102,8 +102,3 @@ with st.expander('Conversation'):
 for i in range(len(st.session_state['stored_session']) - 1, -1, -1):
     with st.sidebar.expander(f'Conversation-Session: {i}'):
         st.write(st.session_state['stored_session'][i])
-
-delete_btn = st.sidebar.button('Delete')
-
-if delete_btn:
-    del st.session_state['stored_session']
